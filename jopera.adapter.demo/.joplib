@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OCRLIB VER="2.0">
+  <LIBS>
+    <OML>lib.bpel</OML>
+    <OML>lib.xml</OML>
+    <OML>lib.math</OML>
+    <OML>lib.ui.browser</OML>
+  </LIBS>
+</OCRLIB>
+

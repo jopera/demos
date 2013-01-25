@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OCR VER="2.0" MAXID="44">
+  <PROCS>
+    <PROC OID="Process17" NAME="Test_DEMO_Adapter_Process" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" PUBLISHED="true" SUBPROC="false" FLOWCONTROL="false">
+      <INBOX>
+        <PARAM OID="InboxParameter22" NAME="document" DESC="" TYPE="String" />
+        <PARAM OID="InboxParameter23" NAME="text" DESC="" TYPE="String" />
+        <PARAM OID="InboxParameter24" NAME="input" DESC="" TYPE="String" />
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter25" NAME="Output" DESC="" TYPE="String" />
+      </OUTBOX>
+      <TASKS>
+        <ACTIVITY OID="Activity26" NAME="Test_DEMO_Adapter" DESC="" ACT="" COND="TRUE" PRIORITY="0" DEP="4" SYNCH="0" FAILH="0" PROGRAMID="Program1" />
+      </TASKS>
+      <DATAFLOW>
+        <BIND OID="Binding34" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter22" DESTPID="InboxParameter13" DESTTID="Activity26" ACTION="0" />
+        <BIND OID="Binding37" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter23" DESTPID="InboxParameter14" DESTTID="Activity26" ACTION="0" />
+        <BIND OID="Binding40" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter24" DESTPID="InboxParameter15" DESTTID="Activity26" ACTION="0" />
+        <BIND OID="Binding43" SRCTYP="0" DESTTYP="3" SRCPID="OutboxParameter16" DESTPID="OutboxParameter25" SRCTID="Activity26" ACTION="0" />
+      </DATAFLOW>
+      <VIEWS>
+        <VIEW OID="View18" NAME="ControlFlow" DESC="" VTYPE="0">
+          <ARROWS />
+          <BOXES>
+            <RBOX OID="RefBox28" X="0.0" Y="50.0" DX="0.0" DY="0.0" REF="Activity26" REFTYPE="0">
+              <BOXES />
+            </RBOX>
+          </BOXES>
+          <GROUPS />
+        </VIEW>
+        <VIEW OID="View19" NAME="DataFlow" DESC="" VTYPE="1">
+          <ARROWS>
+            <ARROW OID="Arrow35" SOURCE="RefBox33" DESTINATION="RefBox29" REF="Binding34" REFTYPE="1" />
+            <ARROW OID="Arrow38" SOURCE="RefBox36" DESTINATION="RefBox30" REF="Binding37" REFTYPE="1" />
+            <ARROW OID="Arrow41" SOURCE="RefBox39" DESTINATION="RefBox31" REF="Binding40" REFTYPE="1" />
+            <ARROW OID="Arrow44" SOURCE="RefBox32" DESTINATION="RefBox42" REF="Binding43" REFTYPE="1" />
+          </ARROWS>
+          <BOXES>
+            <RBOX OID="RefBox20" X="250.0" Y="0.0" DX="0.0" DY="0.0" REF="Process17" REFTYPE="5">
+              <BOXES>
+                <RBOX OID="RefBox33" X="460.0" Y="53.0" DX="0.0" DY="0.0" REF="InboxParameter22" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox36" X="349.0" Y="52.0" DX="0.0" DY="0.0" REF="InboxParameter23" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox39" X="231.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter24" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox21" X="254.0" Y="643.0" DX="0.0" DY="0.0" REF="Process17" REFTYPE="6">
+              <BOXES>
+                <RBOX OID="RefBox42" X="332.0" Y="596.0" DX="0.0" DY="0.0" REF="OutboxParameter25" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox27" X="273.0" Y="357.0" DX="0.0" DY="0.0" REF="Activity26" REFTYPE="0">
+              <BOXES>
+                <RBOX OID="RefBox29" X="463.0" Y="296.0" DX="0.0" DY="0.0" REF="InboxParameter13" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox30" X="325.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter14" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox31" X="215.0" Y="297.0" DX="0.0" DY="0.0" REF="InboxParameter15" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox32" X="325.0" Y="410.0" DX="0.0" DY="0.0" REF="OutboxParameter16" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+          </BOXES>
+          <GROUPS />
+        </VIEW>
+      </VIEWS>
+    </PROC>
+  </PROCS>
+  <PROGRAMS>
+    <PROGRAM OID="Program1" NAME="Call_DEMO_Adapter" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" SIZE="0" RESTART="0">
+      <INBOX>
+        <PARAM OID="InboxParameter13" NAME="document" DESC="" TYPE="String" />
+        <PARAM OID="InboxParameter14" NAME="text" DESC="" TYPE="String" />
+        <PARAM OID="InboxParameter15" NAME="input" DESC="" TYPE="String" />
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter16" NAME="Output" DESC="" TYPE="String" />
+      </OUTBOX>
+      <ACCESS>
+        <METHOD OID="AccessMethod2" NAME="NewAdapter" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" COMP="system.demo.CT_DEMO">
+          <INBOX>
+            <PARAM OID="InboxParameter4" NAME="INPUT" TYPE="String">Some %input%</PARAM>
+            <PARAM OID="InboxParameter6" NAME="INPUT_TEXT" TYPE="Text">Some more
+%text%
+input data</PARAM>
+            <PARAM OID="InboxParameter8" NAME="INPUT_XML" TYPE="XML">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;XML&gt;
+This is an XML %document% to be passed on to the subsystem.
+&lt;/XML&gt;</PARAM>
+            <PARAM OID="InboxParameter10" NAME="INPUT_URL" TYPE="URL">http://www.jopera.org</PARAM>
+          </INBOX>
+          <OUTBOX>
+            <PARAM OID="OutboxParameter12" NAME="OUTPUT" TYPE="String" />
+          </OUTBOX>
+        </METHOD>
+      </ACCESS>
+    </PROGRAM>
+  </PROGRAMS>
+</OCR>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.jopera.core.model">
+      <model resource="data/demo.oml"/>
+   </extension>
+   <extension
+         point="org.jopera.core.example">
+      <example resource="data/demo_example.oml"/>
+   </extension>
+   <extension
+         point="org.jopera.kernel.SubSystem">
+      <SubSystem
+            SID="DEMO"
+            class="jopera.adapter.demo.DemoSubSystem"/>
+   </extension>
+
+</plugin>

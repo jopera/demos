@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OCR VER="2.0" MAXID="41">
+  <COMPS>
+    <COMP OID="CT_DEMO" NAME="DEMO" DESC="This is the demo adapter component type definition" ABSTRACT="false">
+      <INBOX>
+        <PARAM OID="InboxParameter2" NAME="INPUT" DESC="" TYPE="String" />
+        <PARAM OID="InboxParameter4" NAME="INPUT_TEXT" DESC="" TYPE="Text" />
+        <PARAM OID="InboxParameter7" NAME="INPUT_XML" DESC="" TYPE="XML" />
+        <PARAM OID="InboxParameter8" NAME="INPUT_URL" DESC="" TYPE="URL" />
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter5" NAME="OUTPUT" DESC="" TYPE="String" />
+      </OUTBOX>
+    </COMP>
+  </COMPS>
+</OCR>

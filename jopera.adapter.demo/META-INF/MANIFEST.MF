@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JOpera Adapter Demo Plug-in
+Bundle-SymbolicName: jopera.adapter.demo;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Localization: plugin
+Require-Bundle: org.jopera.core,
+ org.jopera.kernel
